@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Simple Interest</h2>
+    
+    
+  <input type="number" id="principal" placeholder="Principal">
+    
+    
+    <input type="number" id="rate" placeholder="Rate Of Interest">
+
+  
+    <input type="number" id="time"placeholder="Time in years">
+    
+    <div class="result">
+      <p>Interest: <span id="interest"></span><br></p> 
+      <p>Total Interest: <span id="plus"></span></p>
+    </div>
+    
+    <button id="btn" class="button-56" role="button">Submit</button>
+  </div>
+
+
+
+  <!--Script-->
+  <script>
+  
+  /*Simple Interest Formula = 
+  p*r*t/100*/
+    
+    btn.addEventListener("click", () => {
+      
+      let p = parseInt(document.getElementById('principal').value);
+      let r = document.getElementById('rate').value;
+      let t = document.getElementById('time').value;
+      let btn = document.getElementById('btn');
+      
+      var interest = (p*r*t)/100;
+      
+      document.getElementById('interest').innerHTML = interest;
+      
+      var plusInterest = p + interest;
+      document.getElementById('plus').innerHTML = plusInterest;
+      
+    })
+    
+  </script>
+</body>
+
+</html>
